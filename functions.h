@@ -3,3 +3,4 @@ char print_space(void);
 char login(void);
 char registering(void);
 void menu(void);
+void switches(int choice1);

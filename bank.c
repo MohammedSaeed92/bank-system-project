@@ -1,19 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+double balance = 0;
 #include "functions.h"
 #include "1-functions.h"
+#include "2-functions.h"
 
-/**
- * menu - a function
- * menu : display the transactions menu
- * Return: a menu of transactions
-*/
-void menu(void)
-{
-	printf(" 1. Balance\n 2. Deposite\n 3. Withdraw\n");
-	printf(" 4. Transfer\n 5. Exit\n");
-}
 /**
  * main - Entry point
  * Description: we will use switch() to enable different options each
@@ -22,9 +14,8 @@ void menu(void)
  */
 int main(void)
 {
-	/*int choice1;*/
+	int choice1;
 	int choice;
-	/*double amount, balance;*/
 
 	print_space();
 	printf("Hello\n");
@@ -36,11 +27,16 @@ int main(void)
 		case 1:
 			login();
 			menu();
-
+			printf("Please enter a number for transaction :");
+			scanf("%d", &choice1);
+			switches(choice1);
 			break;
 		case 2:
 			registering();
 			menu();
+			printf("Please enter a number for transaction :");
+			scanf("%d", &choice1);
+			switches(choice1);
 			break;
 		default:
 			printf("Invalid choice");
