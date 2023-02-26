@@ -5,3 +5,5 @@ char registering(void);
 void menu(void);
 void switches(int choice1, double amount, double balance);
 double deposite(double amount, double balance);
+double withdraw(double amount, double balance);
+double transfer(double amount, double balance);

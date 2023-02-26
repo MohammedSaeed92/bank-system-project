@@ -1,4 +1,3 @@
-#include <time.h>
 /**
  * print_line - a function
  * Description : it will prints a line of minus symbol to frame header
@@ -30,6 +29,7 @@ char print_space(void)
 /**
  * login - a function
  * Description : check user input and logs the uset into the system
+ * @retry: number of retries before denying user login
  * Return: a welcome statement and a menu
 */
 int login(int retry)
@@ -41,7 +41,7 @@ int login(int retry)
 	scanf("%s", user);
 	printf("enter your password :");
 	scanf("%d", &pass);
-	if (strcmp(user, "Mohammed") == 0)
+	if (strcmp(user, "Clanguage") == 0)
 	{
 		if (pass == 1234)
 		{
@@ -64,6 +64,7 @@ int login(int retry)
 	} else
 	{
 		printf("User %s doesn't exist\n", user);
+		login(retry);
 	}
 }
 /**

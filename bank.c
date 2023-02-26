@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <time.h>
 #include "functions.h"
 #include "1-functions.h"
 #include "2-functions.h"
@@ -38,7 +39,7 @@ int main(void)
 			menu();
 			printf("Please enter a number for transaction :");
 			scanf("%d", &choice1);
-			switches(choice1,amount, balance);
+			switches(choice1, amount, balance);
 			break;
 		default:
 			printf("Invalid choice");
