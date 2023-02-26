@@ -9,7 +9,9 @@
 /**
  * main - Entry point
  * Description: we will use switch() to enable different options each
- * one will perform a specific task of the bank system operations
+ * one will perform a specific task of the bank system operations and
+ * we will call a function for each operation - the functions are
+ * stored in the files 1-functions.h and 2-functions.h
  * Return: Always 0 (Success)
  */
 int main(void)
@@ -42,7 +44,7 @@ int main(void)
 			switches(choice1, amount, balance);
 			break;
 		default:
-			printf("Invalid choice");
+			printf("Invalid choice\n");
 			break;
 	}
 }
