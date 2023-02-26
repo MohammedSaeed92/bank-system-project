@@ -1,10 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-double balance = 0;
-double amount;
-int choice1;
-int retry = 1;
 #include "functions.h"
 #include "1-functions.h"
 #include "2-functions.h"
@@ -17,6 +13,10 @@ int retry = 1;
  */
 int main(void)
 {
+	double balance = 0;
+	double amount;
+	int choice1;
+	int retry = 1;
 	int choice;
 
 	print_space();
@@ -27,18 +27,18 @@ int main(void)
 	switch (choice)
 	{
 		case 1:
-			login();
+			login(retry);
 			menu();
 			printf("Please enter a number for transaction :");
 			scanf("%d", &choice1);
-			switches(choice1);
+			switches(choice1, amount, balance);
 			break;
 		case 2:
 			registering();
 			menu();
 			printf("Please enter a number for transaction :");
 			scanf("%d", &choice1);
-			switches(choice1);
+			switches(choice1,amount, balance);
 			break;
 		default:
 			printf("Invalid choice");

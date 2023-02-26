@@ -32,7 +32,7 @@ char print_space(void)
  * Description : check user input and logs the uset into the system
  * Return: a welcome statement and a menu
 */
-char login(void)
+int login(int retry)
 {
 	char user[15];
 	int pass;
@@ -58,7 +58,7 @@ char login(void)
 				printf("You have tried 3 times please try again after a while\n");
 				exit(0);
 			}
-			login();
+			login(retry);
 
 		}
 	} else

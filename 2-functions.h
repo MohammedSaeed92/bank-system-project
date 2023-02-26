@@ -15,8 +15,9 @@ void menu(void)
  * @choice1: the choice of the user
  * Return: transaction choosed
 */
-double deposite(double amount)
+double deposite(double amount, double balance)
 {
+	int choice1;
 	printf("Enter the amount you want to deposite :");
 	scanf("%lf", &amount);
 	balance += amount;
@@ -24,7 +25,7 @@ double deposite(double amount)
 	menu();
 	printf("Please enter choice number to continue :");
 	scanf("%d", &choice1);
-	switches(choice1);
+	switches(choice1, amount, balance);
 }
 /**
  * switches - a function
@@ -33,7 +34,7 @@ double deposite(double amount)
  * @choice1: the choice of the user
  * Return: transaction choosed
 */
-void switches(int choice1)
+void switches(int choice1, double amount, double balance)
 {
 	switch (choice1)
 	{
@@ -42,10 +43,10 @@ void switches(int choice1)
 			menu();
 			printf("Please enter choice number to continue :");
 			scanf("%d", &choice1);
-			switches(choice1);
+			switches(choice1, amount, balance);
 			break;
 		case 2:
-			deposite(balance);
+			deposite(amount, balance);
 			break;
 		case 5:
 			break;
