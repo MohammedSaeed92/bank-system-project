@@ -29,7 +29,7 @@ definition of functions :
 * transfer()
 ## 1-functions.h
 contains the first 4 functions mentioned above
-* print_line() : which draws a line above and bellow the user wilcoming message - the line width is 140 character as per my screen width
+* print_line() : which draws a line above and bellow the user wilcoming message - the line width is 140 character as per my terminal screen width 😆
 * print_space() : which prints 80 space before the "Hello" before register or login
 * login() : log the user in before he can do any transaction - after 3 unsuccessful tries a message will apear asking the user to try later and the program exit
 * registering() : regiser a new user by entering username and a password and then logs in the new user automatilly
