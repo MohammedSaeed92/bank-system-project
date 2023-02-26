@@ -1,4 +1,4 @@
-
+#include <time.h>
 /**
  * print_line - a function
  * Description : it will prints a line of minus symbol to frame header
@@ -52,6 +52,14 @@ char login(void)
 		} else
 		{
 			printf("Invalid password\n");
+			++retry;
+			if (retry == 4)
+			{
+				printf("You have tried 3 times please try again after a while\n");
+				exit(0);
+			}
+			login();
+
 		}
 	} else
 	{

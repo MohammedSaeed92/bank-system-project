@@ -2,6 +2,9 @@
 #include <stdlib.h>
 #include <string.h>
 double balance = 0;
+double amount;
+int choice1;
+int retry = 1;
 #include "functions.h"
 #include "1-functions.h"
 #include "2-functions.h"
@@ -14,7 +17,6 @@ double balance = 0;
  */
 int main(void)
 {
-	int choice1;
 	int choice;
 
 	print_space();
